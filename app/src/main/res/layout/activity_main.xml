@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background"
+    >
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="190dp"
+        />
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/logo_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Temukan sensasi makan yang baru di GLHF"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:textColor="@color/common_google_signin_btn_text_light_focused"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="600dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <Button
+        android:layout_marginStart="20dp"
+        android:id="@+id/btn_login_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login as User"
+        android:padding="15sp"
+        android:background="@drawable/rounded_button"
+        />
+
+    <Button
+        android:layout_marginStart="92dp"
+        android:layout_below="@id/btn_login_user"
+        android:background="@drawable/rounded_button"
+        android:padding="15dp"
+        android:id="@+id/btn_login_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login as Admin"
+        />
+    </LinearLayout>
+</RelativeLayout>

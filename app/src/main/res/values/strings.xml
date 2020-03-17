@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Restaurant</string>
+    <string name="nama">nama</string>
+    <string name="description">ini adalah textvoew deskripsi tentang menu ini berisi tentang detail makanan yang sang...</string>
+</resources>

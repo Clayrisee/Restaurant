@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "688656545675",
+    "firebase_url": "https://uwu-project-2d2f5.firebaseio.com",
+    "project_id": "uwu-project-2d2f5",
+    "storage_bucket": "uwu-project-2d2f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688656545675:android:a3a1d152cbc301498d218e",
+        "android_client_info": {
+          "package_name": "com.alisu.marketplaces"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688656545675-ba5jr2bu6fd69bmtjcbbfahdqia0g4sq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alisu.marketplaces",
+            "certificate_hash": "2628b7c530ea28292eb4f672e70e67b44c9a7f02"
+          }
+        },
+        {
+          "client_id": "688656545675-mj36dvknvkpfo9pfb0s7s0e2jvsfijuc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqNYosv4v0AU1vOAixn8Z39DMbfIdePj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688656545675-mj36dvknvkpfo9pfb0s7s0e2jvsfijuc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688656545675:android:48454589eb7e17178d218e",
+        "android_client_info": {
+          "package_name": "com.alisu.restaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688656545675-sor56e6padg8qspb3ibad28kgbdoofn1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alisu.restaurant",
+            "certificate_hash": "2628b7c530ea28292eb4f672e70e67b44c9a7f02"
+          }
+        },
+        {
+          "client_id": "688656545675-mj36dvknvkpfo9pfb0s7s0e2jvsfijuc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqNYosv4v0AU1vOAixn8Z39DMbfIdePj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688656545675-mj36dvknvkpfo9pfb0s7s0e2jvsfijuc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
