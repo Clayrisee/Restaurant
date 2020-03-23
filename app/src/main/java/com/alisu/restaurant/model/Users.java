@@ -1,8 +1,15 @@
 package com.alisu.restaurant.model;
 
 public class Users {
-    private String name,password;
+    private String name,password,phone;
 
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
 
     public Users() {
     }

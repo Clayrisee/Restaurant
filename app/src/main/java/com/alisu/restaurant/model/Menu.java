@@ -4,8 +4,17 @@ import com.google.firebase.database.IgnoreExtraProperties;
 
 @IgnoreExtraProperties
 public class Menu {
-    private String nama,description,url;
+    private String nama,description,url,id;
     private int harga;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getNama() {
         return nama;
@@ -42,14 +51,11 @@ public class Menu {
     public Menu() {
     }
 
-    public Menu(String nama, String description, String url, int harga) {
+    public Menu(String nama, String description, String url, String id, int harga) {
         this.nama = nama;
         this.description = description;
         this.url = url;
+        this.id = id;
         this.harga = harga;
     }
-
-
-
-
 }

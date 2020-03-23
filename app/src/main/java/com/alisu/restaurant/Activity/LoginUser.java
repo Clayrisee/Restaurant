@@ -53,6 +53,8 @@ public class LoginUser extends AppCompatActivity {
                 phone    = etPhone.getText().toString();
                 password = etPassword.getText().toString();
 
+
+
                 if (TextUtils.isEmpty(phone)){
                     mDialog.dismiss();
                     Toast.makeText(LoginUser.this, "Please input your phone number", Toast.LENGTH_SHORT).show();
@@ -72,11 +74,16 @@ public class LoginUser extends AppCompatActivity {
                             mDialog.dismiss();
                             //Get user information
                             Users users = dataSnapshot.child(phone).getValue(Users.class);
+
                             if (users != null) {
                                 String usersPassword = users.getPassword();
                                 if (usersPassword.equals(password.toString())) {
+
+
                                     Toast.makeText(LoginUser.this, "Login Succesfully!", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(LoginUser.this,UserActivity.class);
+                                    intent.putExtra("phone",etPhone.getText().toString());
+                                    intent.putExtra("name",users.getName());
                                     Common.currentUser = users;
                                     startActivity(intent);
                                     finish();
@@ -112,4 +119,8 @@ public class LoginUser extends AppCompatActivity {
 
 
     }
+
+
+
+
 }

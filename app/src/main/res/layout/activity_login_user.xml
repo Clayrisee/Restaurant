@@ -26,6 +26,7 @@
         android:layout_centerHorizontal="true"
         android:hint="Enter your phone number"
         android:padding="10dp"
+        android:inputType="number"
         android:background="@drawable/edit_round"
         />
     <EditText

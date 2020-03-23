@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,33 +51,49 @@ public class UserSignup extends AppCompatActivity {
                 password    = etPassword.getText().toString();
                 phone       = etPhone.getText().toString();
 
+                if (TextUtils.isEmpty(phone)){
+                    mDialog.dismiss();
+                    Toast.makeText(UserSignup.this, "Please input your phone number", Toast.LENGTH_SHORT).show();
+                }
+                else if (TextUtils.isEmpty(password)){
+                    mDialog.dismiss();
+                    Toast.makeText(UserSignup.this, "Please input your password", Toast.LENGTH_SHORT).show();
+                }
 
-                table_users.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        //Check if phone number is already exist
-                        if (dataSnapshot.child(phone).exists()) {
-                            mDialog.dismiss();
-                            Toast.makeText(UserSignup.this, "Phone number is already exist", Toast.LENGTH_SHORT).show();
+                else if (TextUtils.isEmpty(name)){
+                    mDialog.dismiss();
+                    Toast.makeText(UserSignup.this, "Please input your name", Toast.LENGTH_SHORT).show();
+                }
+
+                else {
+                    table_users.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            //Check if phone number is already exist
+                            if (dataSnapshot.child(phone).exists()) {
+                                mDialog.dismiss();
+                                Toast.makeText(UserSignup.this, "Phone number is already exist", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(UserSignup.this, LoginUser.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                mDialog.dismiss();
+                                Users users = new Users(name, password);
+                                table_users.child(phone).setValue(users);
+                                Toast.makeText(UserSignup.this, "Sign up successfully!", Toast.LENGTH_SHORT).show();
+                                finish();
+                            }
                         }
 
-                        else {
-                            mDialog.dismiss();
-                            Users users = new Users(name,password);
-                            table_users.child(phone).setValue(users);
-                            Toast.makeText(UserSignup.this, "Sign up successfully!", Toast.LENGTH_SHORT).show();
-                            finish();
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
                         }
-                    }
+                    });
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-
-
+                }
             }
         });
+
     }
 }
