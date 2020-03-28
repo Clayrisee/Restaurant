@@ -46,13 +46,19 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        quantity = etQuantity.getText().toString();
-        
+
 
         btnAddChart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Database(getBaseContext()).addToCart(new Order(name,quantity,harga,id));
+                harga = String.valueOf((Integer.parseInt(harga)*Integer.parseInt(quantity)));
+                Order order = new Order(name,quantity,harga,id);
+                order.setId(id);
+                order.setName(name);
+                order.setPrice(harga);
+                order.setQuantity(quantity);
+                new Database(getBaseContext()).addToCart(order);
+
                 Toast.makeText(DetailActivity.this, "Your add "+name+" to cart", Toast.LENGTH_SHORT).show();
                 finish();
             }
@@ -63,11 +69,11 @@ public class DetailActivity extends AppCompatActivity {
 
     private void getExtra(){
         Intent intent = getIntent();
-        this.name = intent.getStringExtra("nama");
-        this.harga = intent.getStringExtra("harga");
-        this.description = intent.getStringExtra("description");
-        this.url = intent.getStringExtra("url");
-        this.id = intent.getStringExtra("id");
+        name = intent.getStringExtra("nama");
+        harga = intent.getStringExtra("harga");
+        description = intent.getStringExtra("description");
+        url = intent.getStringExtra("url");
+        id = intent.getStringExtra("id");
     }
 
     private void set(){
@@ -90,11 +96,12 @@ public class DetailActivity extends AppCompatActivity {
     private void incNumber(){
         int inc = Integer.parseInt(etQuantity.getText().toString());
         display(inc + 1);
+        quantity = etQuantity.getText().toString();
     }
     private void decNumber(){
         int inc = Integer.parseInt(etQuantity.getText().toString());
         display(inc - 1);
-
+        quantity = etQuantity.getText().toString();
     }
     private void display(int number){
         String quan= String.valueOf(number);

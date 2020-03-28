@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_menu_admin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_menu"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="@android:color/white"
+        android:padding="5dp"
+        android:src="@drawable/ic_add_black_24dp"
+
+        />
+
+</RelativeLayout>

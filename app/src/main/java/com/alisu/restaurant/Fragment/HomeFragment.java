@@ -18,14 +18,11 @@ import com.alisu.restaurant.Activity.DetailActivity;
 import com.alisu.restaurant.Adapter.MenuAdapter;
 import com.alisu.restaurant.R;
 import com.alisu.restaurant.model.Menu;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 

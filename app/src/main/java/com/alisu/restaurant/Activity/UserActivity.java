@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.alisu.restaurant.Fragment.CartFragment;
 import com.alisu.restaurant.Fragment.HomeFragment;
+import com.alisu.restaurant.Fragment.OrdersFragment;
 import com.alisu.restaurant.Fragment.UserFragment;
 import com.alisu.restaurant.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -48,6 +49,11 @@ public class UserActivity extends AppCompatActivity {
 
                 case R.id.nav_user :
                     selectedFragment = new UserFragment();
+                    getBundles(selectedFragment);
+                    break;
+
+                case R.id.nav_order :
+                    selectedFragment = new OrdersFragment();
                     getBundles(selectedFragment);
                     break;
             }
