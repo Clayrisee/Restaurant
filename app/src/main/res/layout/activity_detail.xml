@@ -12,13 +12,14 @@
     <TextView
         android:layout_marginStart="5dp"
         android:id="@+id/nama_menu"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nama Menu"
         android:textSize="20sp"
         android:textStyle="bold"
         android:padding="10dp"
+        android:layout_centerHorizontal="true"
         android:textColor="#000000"
 
         />
@@ -34,7 +35,7 @@
         android:id="@+id/ln_harga"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nama_menu"
+        android:layout_below="@id/gambar_menu"
         android:orientation="horizontal"
         android:background="@drawable/edit_round"
         android:padding="6dp"
